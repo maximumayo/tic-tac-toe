@@ -1,0 +1,58 @@
+body {
+    background-color: sandybrown;
+}
+
+header {
+    background-color: #eee;
+    height: 80px;
+}
+
+#main {
+    background-color: darkgrey;
+    height: 600px;
+}
+
+#game_area {
+    height: 600px;
+}
+
+#game_area > div {
+    height: 100%;
+}
+
+#inner_box {
+    background-color: pink;
+}
+
+#stats_area {
+    height: 600px;
+}
+
+.button_container {
+    height: 100%;
+}
+
+.square_row {
+    height: 33.333%;
+}
+
+.square_row button {
+    height: 100%;
+}
+
+.square {
+    font-size: 72px;
+    color: sandybrown;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
