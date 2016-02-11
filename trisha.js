@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 //GLOBAL VARIABLES//
-=======
+
 var current_square = null;
 var p1;
 var p2;
@@ -21,12 +21,11 @@ $(document).ready(function(){
 
     create3x3();
 
->>>>>>> e5bd3a8844ac6dae64974da4e6d0193b281a5fb7
 
 //@purpose: hold the click handler for each 'square' on our game board and allows them all to be clicked and then call to other functions
 //@params: none
 //@return: none
-<<<<<<< HEAD
+
 //@global:
 var current_square = null;
 var p1;
@@ -39,7 +38,6 @@ $(document).ready(function () {
 =======
 //@global: none
     $('.square').click(function(){
->>>>>>> e5bd3a8844ac6dae64974da4e6d0193b281a5fb7
         console.log('square clicked');
         current_square = $(this);
         store_square($(this).attr('id'));
