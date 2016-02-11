@@ -8,6 +8,7 @@ header {
 }
 
 #main {
+    /*background-color: darkgrey;*/
     height: 600px;
 }
 
@@ -24,7 +25,6 @@ header {
 }
 
 #stats_area {
-    background-color: darkgrey;
     height: 600px;
     background-color: darkgrey;
 }
@@ -38,7 +38,7 @@ header {
 }
 
 .square_row button {
-    height: 50%;
+    height: 100%;
 }
 
 .square {
@@ -47,19 +47,21 @@ header {
     text-transform: capitalize;
 }
 
-/*FIVE BY FIVE BOARD*/
-
 .col-xs-9 {
     padding-right: 14px;
     padding-left: 14px;
 }
 
-.five_box {
-    /*margin-bottom: -120px;*/
+/*5X5 board*/
+
+.square_row_five {
     height: 20%;
 }
 
 .square_row_five button {
     height: 100%;
+}
+
+.col-xs-2 {
     width: 20%;
 }

@@ -66,33 +66,33 @@ function find_winner() {
         console.log('no winners! play again!');
         turn_counter++;
     }
+
 }
 
-//this does not work!
-//$(document).ready(function () {
-//    $('#five_by').click(function () {
-//        console.log('five_by clicked');
-//        create5x5();
-//        //$(this).attr('disabled', true);
-//    });
-//});
-
-//this works!
+//document ready function
+//contains click handler for creation of 5x5 board
 $(document).ready(function () {
-    create5x5();
+    $('#five_by').click(function () {
+        create5x5();
+    });
 });
 
-var id_number = 0;
 
+//dynamic 5x5 board creation
 function create5x5() {
     var new_button_container = $('<div>').addClass('col-xs-12 button_container');
     var new_parent_row = $('<div>').addClass('row');
     for (var i = 0; i < 5; i++) {
-        var new_row = $('<div>').addClass('row square_row square_row_five five_box');
+        var new_row = $('<div>').addClass('row square_row_five');
         for (var j = 0; j < 5; j++) {
-            var new_board = $('<button>').addClass('square col-xs-2').attr('id', id_number);
+            var new_button = $('<button>').addClass('square col-xs-2').attr({
+                id: id_number,
+                indicator: indicator_number
+            });
             id_number++;
-            $(new_row).append(new_board);
+            indicator_number += indicator_number;
+            console.log(indicator_number);
+            $(new_row).append(new_button);
         }
         $(new_button_container).append(new_row);
     }
