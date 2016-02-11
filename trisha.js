@@ -20,9 +20,8 @@ $(document).ready(function(){
         console.log('square clicked');
         current_square = $(this);
         store_square($(this).attr('id'));
-        turn_counter++;
-        player_turn($(this).text());
-        //player_turn();
+        find_winner();
+        player_turn();
         $(this).attr('disabled', true);
     });
 
@@ -30,8 +29,7 @@ $(document).ready(function(){
      $('.player_sign').click(function(){
        console.log('choosing player button clicked');
        player_select($(this).text());
-       player_turn($(this).text());
-       //player_turn();
+       player_turn();
      });
 });
 
@@ -56,17 +54,13 @@ function store_square(square_value){
  }
 
 
- function player_turn(button_value){
+ function player_turn(){
    console.log('selecting player function');
    if(turn_counter %2 === 0){
      $('#player_turn').text('Player 1\'s turn');
-      //player = p1;
-       find_winner();
-       //turn_counter++;
+      player = p1;
    } else {
      $('#player_turn').text('Player 2\'s turn');
-      //player = p2;
-       find_winner();
-       //turn_counter++;
+      player = p2;
    }
  }
