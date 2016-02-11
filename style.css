@@ -8,6 +8,10 @@ header {
 }
 
 #main {
+<<<<<<< HEAD
+=======
+    /*background-color: darkgrey;*/
+>>>>>>> e5bd3a8844ac6dae64974da4e6d0193b281a5fb7
     height: 600px;
 }
 
@@ -26,6 +30,7 @@ header {
 #stats_area {
     background-color: darkgrey;
     height: 600px;
+    background-color: darkgrey;
 }
 
 .button_container {
@@ -47,6 +52,11 @@ header {
 }
 
 /*FIVE BY FIVE BOARD*/
+
+.col-xs-9 {
+    padding-right: 14px;
+    padding-left: 14px;
+}
 
 .five_box {
     /*margin-bottom: -120px;*/
