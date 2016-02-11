@@ -12,10 +12,11 @@ $(document).ready(function(){
 //@params:
 //@return:
 //@globals:
-    $('#three_by').click(function(){
-        create3x3();
-    });
+//    $('#three_by').click(function(){
+//        create3x3();
+//    });
 
+    create3x3();
 
 
 //@purpose: hold the click handler for each 'square' on our game board and allows them all to be clicked and then call to other functions
