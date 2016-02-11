@@ -10,6 +10,8 @@ function find_winner(){
     if(moves_array[0] == "X" && moves_array[1] == "X" && moves_array[2] == "X"){
         console.log('first one');
         console.log(player + ' wins!');
+        var winner_div = $('<div>').text(player + ' wins!');
+        $('#stats_area').append(winner_div);
     }
     else if(moves_array[0] == "O" && moves_array[1] == "O" && moves_array[2] == "O"){
         console.log(player + ' wins!');
