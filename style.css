@@ -52,13 +52,16 @@ header {
     padding-left: 14px;
 }
 
+/*5X5 board*/
 
+.square_row_five {
+    height: 20%;
+}
 
+.square_row_five button {
+    height: 100%;
+}
 
-
-
-
-
-
-
-
+.col-xs-2 {
+    width: 20%;
+}
