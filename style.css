@@ -8,7 +8,7 @@ header {
 }
 
 #main {
-    background-color: darkgrey;
+    /*background-color: darkgrey;*/
     height: 600px;
 }
 
@@ -26,6 +26,7 @@ header {
 
 #stats_area {
     height: 600px;
+    background-color: darkgrey;
 }
 
 .button_container {
@@ -44,6 +45,11 @@ header {
     font-size: 72px;
     color: sandybrown;
     text-transform: capitalize;
+}
+
+.col-xs-9 {
+    padding-right: 14px;
+    padding-left: 14px;
 }
 
 
