@@ -1,5 +1,5 @@
 //GLOBAL VARIABLES//
-var player_moves_array = ['','','','','','','','',''];
+var player_moves_moves_array = ['','','','','','','','',''];
 
 
 
@@ -9,7 +9,6 @@ var player_moves_array = ['','','','','','','','',''];
 //@params: none
 //@return: none
 //@global:
-var array = ['','','','','','','','',''];
 var current_square = null;
 var p1;
 var p2;
@@ -18,12 +17,12 @@ var turn_counter = 0;
 
 $(document).ready(function(){
     $('.square').click(function(){
-
         console.log('square clicked');
         current_square = $(this);
         store_square($(this).attr('id'));
         turn_counter++;
         player_turn($(this).text());
+        //player_turn();
         $(this).attr('disabled', true);
     });
 
@@ -32,13 +31,14 @@ $(document).ready(function(){
        console.log('choosing player button clicked');
        player_select($(this).text());
        player_turn($(this).text());
+       //player_turn();
      });
 });
 
 function store_square(square_value){
     console.log('store square called');
-    array[square_value] += player;
-        console.log(array);
+    moves_array[square_value] += player;
+        console.log(moves_array);
     current_square.text(player);
 }
 
@@ -60,9 +60,13 @@ function store_square(square_value){
    console.log('selecting player function');
    if(turn_counter %2 === 0){
      $('#player_turn').text('Player 1\'s turn');
-      player = p1;
+      //player = p1;
+       find_winner();
+       //turn_counter++;
    } else {
      $('#player_turn').text('Player 2\'s turn');
-      player = p2;
+      //player = p2;
+       find_winner();
+       //turn_counter++;
    }
  }
