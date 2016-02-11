@@ -8,7 +8,6 @@ header {
 }
 
 #main {
-    background-color: darkgrey;
     height: 600px;
 }
 
@@ -25,6 +24,7 @@ header {
 }
 
 #stats_area {
+    background-color: darkgrey;
     height: 600px;
 }
 
@@ -37,7 +37,7 @@ header {
 }
 
 .square_row button {
-    height: 100%;
+    height: 50%;
 }
 
 .square {
@@ -46,13 +46,14 @@ header {
     text-transform: capitalize;
 }
 
+/*FIVE BY FIVE BOARD*/
 
+.five_box {
+    /*margin-bottom: -120px;*/
+    height: 20%;
+}
 
-
-
-
-
-
-
-
-
+.square_row_five button {
+    height: 100%;
+    width: 20%;
+}

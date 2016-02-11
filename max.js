@@ -5,13 +5,13 @@
 var moves_array = ["", "", "", "", "", "", "", "", ""];
 
 //checks for a horizontal win!!
-function find_winner(){
+function find_winner() {
     console.log(turn_counter);
-    if(moves_array[0] == "X" && moves_array[1] == "X" && moves_array[2] == "X"){
+    if (moves_array[0] == "X" && moves_array[1] == "X" && moves_array[2] == "X") {
         console.log('first one');
         console.log(player + ' wins!');
     }
-    else if(moves_array[0] == "O" && moves_array[1] == "O" && moves_array[2] == "O"){
+    else if (moves_array[0] == "O" && moves_array[1] == "O" && moves_array[2] == "O") {
         console.log(player + ' wins!');
     }
     else if (moves_array[3] == "X" && moves_array[4] == "X" && moves_array[5] == "X") {
@@ -64,7 +64,36 @@ function find_winner(){
         console.log('no winners! play again!');
         turn_counter++;
     }
+}
 
+//this does not work!
+//$(document).ready(function () {
+//    $('#five_by').click(function () {
+//        console.log('five_by clicked');
+//        create5x5();
+//        //$(this).attr('disabled', true);
+//    });
+//});
 
+//this works!
+$(document).ready(function () {
+    create5x5();
+});
 
+var id_number = 0;
+
+function create5x5() {
+    var new_button_container = $('<div>').addClass('col-xs-12 button_container');
+    var new_parent_row = $('<div>').addClass('row');
+    for (var i = 0; i < 5; i++) {
+        var new_row = $('<div>').addClass('row square_row square_row_five five_box');
+        for (var j = 0; j < 5; j++) {
+            var new_board = $('<button>').addClass('square col-xs-2').attr('id', id_number);
+            id_number++;
+            $(new_row).append(new_board);
+        }
+        $(new_button_container).append(new_row);
+    }
+    $(new_parent_row).append(new_button_container);
+    $('#game_area').append(new_parent_row);
 }
