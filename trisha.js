@@ -11,20 +11,13 @@ var indicator_number = 1;
 /*--------DOCUMENT READY FUNCTION--------*/
 $(document).ready(function(){
 
+
     /*--------3X3 DYNAMIC BOARD CALL--------*/
 
 //@purpose: calls to the create3x3() function in order to dynamically make the tic-tac-toe board on page load
 //@params: none
 //@return: none
 //@globals: none
-//    $('#stats_area').on ('click', '#three_by', (function(){
-//        create3x3();
-//    });
-
-    //$('#game_area').on('click', '#three_by', function(){
-    //    create3x3();
-    //});
-
     $('#three_by').click(function(){
         create3x3();
     });
@@ -37,15 +30,6 @@ $(document).ready(function(){
 //@params: none
 //@return: none
 //@global: none
-//    $('.square').click(function(){
-//        console.log('square clicked');
-//        current_square = $(this);
-//        store_square($(this).attr('id'));
-//        find_winner();
-//        player_turn();
-//        $(this).attr('disabled', true);
-//    });
-
     $('#game_area').on('click', 'button', function(){
         console.log('square clicked');
         current_square = $(this);
@@ -67,6 +51,13 @@ $(document).ready(function(){
         player_select($(this).text());
         player_turn();
     });
+
+
+    $('.btn-primary').click(function(){
+       reset_game();
+    });
+
+    //var winner_div = $('<div>').text(player + ' wins!');
 });
 
 
@@ -150,4 +141,18 @@ function create3x3(){
     }
     $(new_parent_row).append(new_button_container);
     $('#game_area').append(new_parent_row);
+}
+
+
+function reset_game() {
+    moves_array = ["", "", "", "", "", "", "", "", ""];
+    current_square = null;
+    p1 = null;
+    p2 = null;
+    player = null;
+    turn_counter = 0;
+    id_number = 0;
+    indicator_number = 1;
+    $('#game_area > .row').remove();
+    $(winner_div).remove();
 }

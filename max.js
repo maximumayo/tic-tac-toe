@@ -3,11 +3,11 @@
 //moves_array array will store the X's and O's as the players take their moves_array
 
 var moves_array = ["", "", "", "", "", "", "", "", ""];
-
+var winner_div;
 //checks for a horizontal win!!
 function find_winner() {
     console.log(turn_counter);
-    var winner_div = $('<div>').text(player + ' wins!');
+     winner_div = $('<div>').text(player + ' wins!');
 
     if (moves_array[0] == "X" && moves_array[1] == "X" && moves_array[2] == "X") {
         console.log('first one');
