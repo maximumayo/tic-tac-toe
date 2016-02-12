@@ -86,7 +86,7 @@ function player_select(button_value){
     if (button_value === 'X'){
         p1 = button_value;
         p2 = 'O';
-        console.log('p1 is x');
+        console.log('p1 is X');
 
     } else {
         p1 = button_value;
@@ -194,11 +194,16 @@ function win_condition(array) {
                 count++;
                 if (count === board_size) {
                     //add dynamic div to say player won
-                    winner_div = $('<div>').text(player + ' wins!');
+                    winner_div = $('<div>').css({"font-family":'symbolFont', "font-weight":'bolder'}).text(player + ' wins!');
+                    $('#stats_area').append(winner_div);
                     console.log(player + " wins!");
                 }
             }
         }
+    }
+    if(turn_counter === (board_size * board_size)-1){
+        winner_div = $('<div>').text('DRAW!');
+        $('#stats_area').append(winner_div);
     }
     turn_counter++;
 }
