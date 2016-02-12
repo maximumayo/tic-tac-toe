@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="max.js"></script>
@@ -11,16 +12,20 @@
     <script src="frank.js"></script>
 </head>
 <body>
-
+<img id="batman" src="images/batman.png">
+<img id='superman' src="images/superman.png">
 <div class="container">
 
     <!--HEADER -->
     <header class="row">
-        <div class="col-xs-12 text-center"><h1>Tic Tac Toe</h1></div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#charSelectModal">
-            Choose SuperHero
-        </button>
+        <div class="col-xs-12 text-center">
+            <h1>BATMAN v SUPERMAN</h1>
+            <h6>TIC-TAC-TOE</h6>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#charSelectModal">
+                Choose SuperHero
+            </button>
+        </div>
     </header>
     <!--END HEADER-->
 
@@ -30,7 +35,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title text-center" id="myModalLabel">Choose Your Character</h2>
+                    <h2 class="modal-title text-center" id="myModalLabel">Tic-Tac-Toe: CHOOSE YOUR CHARACTER</h2>
                 </div>
                 <div class="modal-body">
 
@@ -39,13 +44,16 @@
                         <button class="col-xs-6 player_sign super_player">O</button>
                     </div>
 
-                    <button id="three_by">3x3</button>
-                    <button id="five_by">5x5</button>
+                    <!--<button id="three_by">3x3</button>-->
+                    <!--<button id="five_by">5x5</button>-->
 
                     <div id="player_turn super_player"></div>
                 </div>
                 <div class="modal-footer">
+                    <button class="board_size" id="three_by">Game Board: 3x3</button>
+                    <button class="board_size" id="five_by">Game Board: 5x5</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
                 </div>
             </div>
         </div>
@@ -80,6 +88,7 @@
                 </div>
                 <!--end game_area -->
                 <!--STATS AREA -->
+
                 <div id="stats_area" class="col-xs-3 text-center">
                 </div>
                 <!--end stats_area -->
