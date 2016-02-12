@@ -7,6 +7,10 @@ header {
     height: 80px;
 }
 
+header button {
+    float: right;
+}
+
 #main {
     /*background-color: darkgrey;*/
     height: 600px;
@@ -64,4 +68,35 @@ header {
 
 .col-xs-2 {
     width: 20%;
+}
+
+/*Modal Style*/
+
+#charSelectModal {
+    background-color: red;
+}
+
+.modal-body {
+    background-color: black;
+}
+
+.bat_player {
+    height: 50vh;
+    background: url("http://vignette2.wikia.nocookie.net/deathbattle/images/4/40/Batman_MKvsDCU.png/revision/latest?cb=20140803005308") no-repeat center/contain;
+    background-color: #000;
+    outline: none;
+    border: none;
+}
+
+.bat_player:active {
+    background-color: darkred;
+}
+
+.super_player {
+    height: 50vh;
+    background: url("http://vignette2.wikia.nocookie.net/deathbattlefanon/images/c/c2/Superman_MKvsDCU.png/revision/latest?cb=20140723205744") no-repeat center/contain;
+    background-color: #000;
+    outline: hidden;
+    outline: none;
+    border: none;
 }

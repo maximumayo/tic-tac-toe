@@ -17,8 +17,40 @@
     <!--HEADER -->
     <header class="row">
         <div class="col-xs-12 text-center"><h1>Tic Tac Toe</h1></div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#charSelectModal">
+            Choose SuperHero
+        </button>
     </header>
     <!--END HEADER-->
+
+    <!--CHOOSE CHARACTER MODAL-->
+    <div class="modal fade" id="charSelectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title text-center" id="myModalLabel">Choose Your Character</h2>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <button class="col-xs-6 player_sign bat_player">X</button>
+                        <button class="col-xs-6 player_sign super_player">O</button>
+                    </div>
+
+                    <button id="three_by">3x3</button>
+                    <button id="five_by">5x5</button>
+
+                    <div id="player_turn super_player"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end modal-->
 
     <!--MAIN CONTAINS game_area AND stats_area-->
     <div id="main" class="row">
@@ -49,12 +81,6 @@
                 <!--end game_area -->
                 <!--STATS AREA -->
                 <div id="stats_area" class="col-xs-3 text-center">
-                    <h2>Player Stats:</h2>
-                    <button class="player_sign">X</button>
-                    <button class="player_sign">O</button>
-                    <div id="player_turn"></div>
-                    <button id="three_by">3x3</button>
-                    <button id="five_by">5x5</button>
                 </div>
                 <!--end stats_area -->
             </div>
@@ -62,5 +88,7 @@
     </div>
 
 </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
