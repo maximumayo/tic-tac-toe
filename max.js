@@ -2,8 +2,11 @@
 //winning is based on X and O positions within the array
 //moves_array array will store the X's and O's as the players take their moves_array
 
+/*--------GLOBAL VARIABLES--------*/
 var moves_array;
 var winner_div;
+
+/*--------HARD CODED 3X3 WIN CONDITION FUNCTION--------*/
 //checks for a horizontal win!!
 //function find_winner() {
 //    console.log(turn_counter);
@@ -162,6 +165,10 @@ function create5x5() {
                     }
                 }
             }
+        }
+        if(turn_counter === (board_size * board_size)-1) {
+            winner_div = $('<div>').text('DRAW!');
+            $('#stats_area').append(winner_div);
         }
         turn_counter++;
     }
