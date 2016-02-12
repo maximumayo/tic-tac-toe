@@ -98,6 +98,7 @@ h2{
     font-size: 72px;
     color: black;
     text-transform: capitalize;
+    /*border: 1px solid black;*/
 }
 
 .col-xs-9 {
@@ -122,7 +123,7 @@ h2{
 /*Modal Style*/
 
 #charSelectModal {
-    background-color: #88171E;
+    background-color: rgba(109, 18, 24, 0.8);
     color: black;
 }
 

@@ -23,7 +23,6 @@ $(document).ready(function(){
     });
 
 
-
     /*--------SQUARE CLICK HANDLER--------*/
 
 //@purpose: hold the click handler for each 'square' on our game board and allows them all to be clicked and then call to other functions
