@@ -37,6 +37,9 @@ img {
 
 header button {
     float: right;
+    position: absolute;
+    right: 5%;
+    top: 15%;
 }
 
 #main {
@@ -119,11 +122,29 @@ h2{
 /*Modal Style*/
 
 #charSelectModal {
-    background-color: red;
+    background-color: #88171E;
+    color: black;
 }
 
 .modal-body {
     background-color: black;
+    color: black;
+}
+
+.modal-title{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.modal-footer .board_size{
+    width: 40%;
+    height: 100%;
+    padding: 4%;
+    font-size: 2em;
+    background-color: #88171E;
+    border: none;
 }
 
 .bat_player {
