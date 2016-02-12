@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="max.js"></script>
@@ -11,12 +12,17 @@
     <script src="frank.js"></script>
 </head>
 <body>
-
+<img id="batman" src="images/batman.png">
+<img id='superman' src="images/superman.png">
 <div class="container">
 
     <!--HEADER -->
     <header class="row">
-        <div class="col-xs-12 text-center"><h1>Tic Tac Toe</h1></div>
+        <div class="col-xs-12 text-center">
+            <h1>BATMAN v SUPERMAN</h1>
+            <h6>TIC-TAC-TOE</h6>
+
+        </div>
     </header>
     <!--END HEADER-->
 
@@ -48,13 +54,8 @@
                 </div>
                 <!--end game_area -->
                 <!--STATS AREA -->
+
                 <div id="stats_area" class="col-xs-3 text-center">
-                    <h2>Player Stats:</h2>
-                    <button class="player_sign">X</button>
-                    <button class="player_sign">O</button>
-                    <div id="player_turn"></div>
-                    <button id="three_by">3x3</button>
-                    <button id="five_by">5x5</button>
                 </div>
                 <!--end stats_area -->
             </div>

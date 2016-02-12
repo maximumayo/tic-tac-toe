@@ -1,19 +1,54 @@
 body {
-    background-color: sandybrown;
+    background-color: black;
+    background-image: url("images/batVsSup.png"), url("images/rain2.gif");
+    background-size: 100%;
+    color: lightgray;
+    font-family: 'Lato', sans-serif;
 }
 
 header {
-    background-color: #eee;
+    background-color: #88171E;
+    opacity: 0.8;
     height: 80px;
+    border-radius: 40em;
+}
+
+h1{
+    transform: translate(0, -20%);
+
+}
+
+h6{
+    transform: translate(0, -60%);
+}
+img {
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+}
+
+#batman {
+    float: left;
+}
+#superman{
+    float: right;
+    right: 0;
 }
 
 #main {
     /*background-color: darkgrey;*/
-    height: 600px;
+    /*height: 600px;*/
+    height: 80%;
+    /*border: 1px solid red;*/
 }
 
 #game_area {
-    height: 600px;
+    /*border: 1px solid green;*/
+    /*height: 600px;*/
+    margin-top: 2%;
+    height: 80vh;
+    left: 12.5%;
+    /*background-color: yellow;*/
 }
 
 #game_area > div {
@@ -24,9 +59,20 @@ header {
     background-color: pink;
 }
 
+h2{
+    color: lightgray;
+}
 #stats_area {
-    height: 600px;
-    background-color: darkgrey;
+    margin-top: 2%;
+    color: lightgray;
+    font-size: 10vh;
+    text-align: center;
+    width: 10%;
+    float: right;
+    height: 80vh;
+    /*background-color: #88171E;*/
+    /*opacity: 0.7;*/
+    border-radius: 2%;
 }
 
 .button_container {
@@ -43,7 +89,7 @@ header {
 
 .square {
     font-size: 72px;
-    color: sandybrown;
+    color: black;
     text-transform: capitalize;
 }
 
