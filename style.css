@@ -3,7 +3,9 @@ body {
     background-image: url("images/batVsSup.png"), url("images/rain2.gif");
     background-size: 100%;
     color: lightgray;
-    font-family: 'Lato', sans-serif;
+    font-family: symbolFont, 'Lato', sans-serif;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
 }
 
 header {
@@ -15,6 +17,7 @@ header {
 
 h1{
     transform: translate(0, -20%);
+    color: black;
 
 }
 
@@ -43,19 +46,14 @@ header button {
 }
 
 #main {
-    /*background-color: darkgrey;*/
-    /*height: 600px;*/
     height: 80%;
-    /*border: 1px solid red;*/
+
 }
 
 #game_area {
-    /*border: 1px solid green;*/
-    /*height: 600px;*/
     margin-top: 2%;
     height: 80vh;
     left: 12.5%;
-    /*background-color: yellow;*/
 }
 
 #game_area > div {
@@ -77,8 +75,6 @@ h2{
     width: 10%;
     float: right;
     height: 80vh;
-    /*background-color: #88171E;*/
-    /*opacity: 0.7;*/
     border-radius: 2%;
 }
 
@@ -94,11 +90,18 @@ h2{
     height: 100%;
 }
 
+@font-face{
+    font-family: symbolFont;
+    src: url(batman_forever/batmfo__.ttf);
+}
+
 .square {
+    font-family: symbolFont, 'Lato', sans-serif;
     font-size: 72px;
     color: black;
     text-transform: capitalize;
-    /*border: 1px solid black;*/
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
 }
 
 .col-xs-9 {
@@ -153,6 +156,7 @@ h2{
     background: url("http://vignette2.wikia.nocookie.net/deathbattle/images/4/40/Batman_MKvsDCU.png/revision/latest?cb=20140803005308") no-repeat center/contain;
     background-color: #000;
     outline: none;
+    font-family: symbolFont, 'Lato', sans-serif;
     border: none;
 }
 
@@ -164,7 +168,7 @@ h2{
     height: 50vh;
     background: url("http://vignette2.wikia.nocookie.net/deathbattlefanon/images/c/c2/Superman_MKvsDCU.png/revision/latest?cb=20140723205744") no-repeat center/contain;
     background-color: #000;
-    outline: hidden;
     outline: none;
+    font-family: symbolFont, 'Lato', sans-serif;
     border: none;
 }

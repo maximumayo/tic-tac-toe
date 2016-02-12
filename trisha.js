@@ -33,7 +33,7 @@ $(document).ready(function(){
         console.log('square clicked');
         current_square = $(this);
         store_square($(this).attr('id'));
-        find_winner();
+        win_condition(moves_array);
         player_turn();
         $(this).attr('disabled', true);
     });
@@ -86,7 +86,7 @@ function player_select(button_value){
     if (button_value === 'X'){
         p1 = button_value;
         p2 = 'O';
-        console.log('p1 is x');
+        console.log('p1 is X');
 
     } else {
         p1 = button_value;
@@ -115,6 +115,13 @@ function player_turn(){
     }
 }
 
+//GLOBALS
+var board_size = null;
+var horizontal = [];
+var vertical = [];
+var left_diag = [];
+var right_diag = [];
+var wins = [];
 
 /*--------DYNAMIC 3X3 BOARD CREATION--------*/
 
@@ -125,6 +132,8 @@ function player_turn(){
 //indicator - a number used that helps create our dynamic win condition
 //id_number - this number gets put as the id value of every element in order from 0-8
 function create3x3(){
+    board_size = 3;
+    moves_array = ["", "", "", "", "", "", "", "", ""];
     var new_button_container = $('<div>').addClass('col-xs-12 button_container');
     var new_parent_row = $('<div>').addClass('row');
     for (var i=0; i<3; i++){
@@ -133,15 +142,71 @@ function create3x3(){
             var new_button = $('<button>').addClass('square col-xs-4').attr({id:id_number, indicator:indicator_number});
             id_number++;
             indicator_number+= indicator_number;
-            console.log(indicator_number);
             $(new_row).append(new_button);
         }
         $(new_button_container).append(new_row);
     }
     $(new_parent_row).append(new_button_container);
     $('#game_area').append(new_parent_row);
+
+
+
+
+//maybe put these inside the board creation
+for (var o = 0; o < (board_size * board_size); o += board_size) {
+    horizontal.push(o);
+    for (var i = o + 1; i < o + board_size; i++) {
+        horizontal.push(i);
+    }
+    wins.push(horizontal);
+    horizontal = [];
 }
 
+
+for (var o = 0; o < board_size; o++) {
+    vertical.push(o);
+    for (var i = o + board_size; i < (board_size * board_size); i += board_size) {
+        vertical.push(i);
+    }
+    wins.push(vertical);
+    vertical = [];
+}
+
+
+for (var i = 0; i < (board_size * board_size); i += (board_size + 1)) {
+    left_diag.push(i);
+}
+wins.push(left_diag);
+
+for (var i = board_size - 1; i < ((board_size * board_size) - 1); i += (board_size - 1)) {
+    right_diag.push(i);
+}
+wins.push(right_diag);
+
+}
+
+
+function win_condition(array) {
+    for (var outer = 0; outer < wins.length; outer++) {
+        var count = 0;
+        for (var inner = 0; inner < board_size; inner++) {
+            if (array[wins[outer][inner]] === player) {
+                count++;
+                if (count === board_size) {
+                    //add dynamic div to say player won
+                    winner_div = $('<div>').css({"font-family":'symbolFont', "font-weight":'bolder'}).text(player + ' wins!');
+                    $('#stats_area').append(winner_div);
+                    console.log(player + " wins!");
+                }
+            }
+        }
+    }
+    if(turn_counter === (board_size * board_size)-1){
+        winner_div = $('<div>').text('DRAW!');
+        $('#stats_area').append(winner_div);
+    }
+    turn_counter++;
+}
 
 function reset_game() {
     moves_array = ["", "", "", "", "", "", "", "", ""];
