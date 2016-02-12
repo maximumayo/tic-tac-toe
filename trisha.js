@@ -55,8 +55,6 @@ $(document).ready(function(){
     $('.btn-primary').click(function(){
        reset_game();
     });
-
-    //var winner_div = $('<div>').text(player + ' wins!');
 });
 
 
@@ -115,7 +113,7 @@ function player_turn(){
     }
 }
 
-//GLOBALS
+/*--------MORE GLOBAL VARIABLES--------*/
 var board_size = null;
 var horizontal = [];
 var vertical = [];
@@ -150,9 +148,15 @@ function create3x3(){
     $('#game_area').append(new_parent_row);
 
 
+    /*--------DYNAMIC CREATION OF WIN CONDITION POSSIBILITIES--------*/
 
+//@purpose: all of these for loops below generate the win condition possibilities and store them into an empty array
+//@params:none
+//@return: an array of win conditions
+//@globals:
+    //board-size - size of board depending on if it is 3x3 or 5x5
+    //horizontal/vertical/left_diag/right_diag - all arrays that temporarily hold each set of win conditions
 
-//maybe put these inside the board creation
 for (var o = 0; o < (board_size * board_size); o += board_size) {
     horizontal.push(o);
     for (var i = o + 1; i < o + board_size; i++) {
@@ -186,6 +190,15 @@ wins.push(right_diag);
 }
 
 
+/*--------DYNAMIC WIN CONDITION FUNCTION--------*/
+
+//@purpose: to check the outer and inner arrays of the win condition array and compare them to the moves_array to find winning conditions
+//@params: array - the array that holds all your moves...X or O
+//@return: a dynamic div that tells the user who won or if it was a draw
+//@global:
+    //turn_counter
+    //board_size
+    //winner_div
 function win_condition(array) {
     for (var outer = 0; outer < wins.length; outer++) {
         var count = 0;
@@ -208,6 +221,13 @@ function win_condition(array) {
     turn_counter++;
 }
 
+
+/*--------RESET THE ENTIRE GAME FUNCTION--------*/
+
+//@purpose: to reset the variables in the game so it can be played again
+//@params: none
+//@return: none
+//@global: a lot...all listed below
 function reset_game() {
     moves_array = ["", "", "", "", "", "", "", "", ""];
     current_square = null;
