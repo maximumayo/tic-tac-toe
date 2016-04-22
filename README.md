@@ -1,6 +1,6 @@
-# hacka-tictactoe-athon
+# tic-tac-toe hackathon
 
-Scope: 
+### Project Notes 
 - Make a tic-tac-toe game
   - at least 2 players
   - at least 3x3 board size
@@ -11,5 +11,14 @@ Scope:
   - Dynamic win condition generation: no hard-coded if statements or data structures to determine win conditions.  Such structures can be made, but must be made dynamically via code, not hand-coded in the final product.
   - players must be able to choose which symbol they use
 
+### The Team
+* Max Mayo (myself)
+* Trisha Meyer
+* Frank Ruiz
+* This was a great group project that required vision/goal coordination
+* We identified what we wanted to do, had to do and what we thought we could do
+
 
 BATMAN V SUPERMAN: TIC-TAC-TOE
+
+![start game screenshot](/images/gameshot.png?raw=true "start game screenshot")
