@@ -2,6 +2,7 @@
 
 ### Project Notes 
 - Make a tic-tac-toe game
+  - limited time frame (2days)
   - at least 2 players
   - at least 3x3 board size
   - players alternate in some way or form
